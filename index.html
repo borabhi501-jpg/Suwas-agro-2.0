@@ -187,4 +187,26 @@ function orderNow() {
   window.open(url, "_blank");
 }
 </script>
+<div class="product-card">
+    <h3>🥔 Potato</h3>
+    <p>₹12 / kg</p>
 
+    <label>Select Quantity:</label>
+    <select id="potatoQty">
+        <option value="0.5">0.5 Kg</option>
+        <option value="1">1 Kg</option>
+        <option value="2">2 Kg</option>
+        <option value="5">5 Kg</option>
+    </select>
+
+    <button onclick="addPotato()">Add to Cart</button>
+</div>
+
+<script>
+function addPotato(){
+    let qty = document.getElementById("potatoQty").value;
+    let total = qty * 12;
+
+    alert("Added: Potato " + qty + " Kg\nTotal: ₹" + total);
+}
+</script>
