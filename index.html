@@ -181,32 +181,61 @@ function orderNow() {
 
 💰 Total: ₹64`;
 
-  let phone = "919678412223"; // 
-  let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(order);
+  <div class="product-card">
 
-  window.open(url, "_blank");
-}
-</script>
-<div class="product-card">
-    <h3>🥔 Potato</h3>
-    <p>₹12 / kg</p>
+<h3>🥔 Potato</h3>
 
-    <label>Select Quantity:</label>
-    <select id="potatoQty">
-        <option value="0.5">0.5 Kg</option>
-        <option value="1">1 Kg</option>
-        <option value="2">2 Kg</option>
-        <option value="5">5 Kg</option>
-    </select>
+<p>₹12 / Kg</p>
 
-    <button onclick="addPotato()">Add to Cart</button>
+<label>Select Quantity</label>
+
+<select id="potatoQty">
+<option value="0.5">0.5 Kg</option>
+<option value="1">1 Kg</option>
+<option value="2">2 Kg</option>
+<option value="5">5 Kg</option>
+</select>
+
 </div>
 
-<script>
-function addPotato(){
-    let qty = document.getElementById("potatoQty").value;
-    let total = qty * 12;
+<br>
 
-    alert("Added: Potato " + qty + " Kg\nTotal: ₹" + total);
+<div class="product-card">
+
+<h3>🧅 Onion</h3>
+
+<p>₹40 / Kg</p>
+
+<label>Select Quantity</label>
+
+<select id="onionQty">
+<option value="0.5">0.5 Kg</option>
+<option value="1">1 Kg</option>
+<option value="2">2 Kg</option>
+<option value="5">5 Kg</option>
+</select>
+
+</div>
+
+<br>
+
+<button onclick="orderNow()">🟢 Order on WhatsApp</button>
+
+<script>
+function orderNow(){
+
+let potato=document.getElementById("potatoQty").value;
+let onion=document.getElementById("onionQty").value;
+
+let message=
+`🛒 *Suwas Agro Order*
+
+🥔 Potato - ${potato} Kg
+🧅 Onion - ${onion} Kg`;
+
+let phone="919678412223"; // 
+
+window.open("https://wa.me/"+phone+"?text="+encodeURIComponent(message));
+
 }
 </script>
