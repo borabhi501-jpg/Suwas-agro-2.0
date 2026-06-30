@@ -1,37 +1,176 @@
-🥔 Potato
-[-] 4 [+]
-🟢 Add
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suwas Agro</title>
 
-🧅 Onion
-[-] 1 [+]
-🟢 Add
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-🍅 Tomato
-[-] 2 [+]
-🟢 Add
+body{
+background:#f5f5f5;
+}
 
-🌶️ Bhut Jolokia
-[-] 1 [+]
-🟢 Add
-🛒 Your Cart
+header{
+background:#1B5E20;
+color:white;
+padding:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
-🥔 Potato × 4
-🧅 Onion × 1
-🍅 Tomato × 2
-🌶️ Bhut Jolokia × 1
+header h2{
+font-size:28px;
+}
 
-Total: ₹285
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+}
 
-[Proceed to WhatsApp]
-New Order - Suwas Agro
+.hero{
+height:400px;
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url("https://images.unsplash.com/photo-1542838132-92c53300491e");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+color:white;
+text-align:center;
+}
 
-🥔 Potato - 4 kg
-🧅 Onion - 1 kg
-🍅 Tomato - 2 kg
-🌶️ Bhut Jolokia - 1 kg
+.hero h1{
+font-size:45px;
+}
 
-Total = ₹285
+.hero p{
+margin-top:10px;
+font-size:18px;
+}
 
-Customer Name:
-Mobile:
-Address:
+.btn{
+margin-top:20px;
+padding:12px 25px;
+background:#4CAF50;
+color:white;
+text-decoration:none;
+border-radius:30px;
+}
+
+.products{
+padding:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+border-radius:12px;
+padding:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+text-align:center;
+}
+
+.card h3{
+color:#2E7D32;
+}
+
+.price{
+font-size:22px;
+font-weight:bold;
+margin:10px 0;
+}
+
+button{
+background:#2E7D32;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:20px;
+cursor:pointer;
+}
+
+footer{
+background:#1B5E20;
+color:white;
+padding:20px;
+text-align:center;
+margin-top:30px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h2>Suwas Agro</h2>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Products</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Fresh Vegetables & Grocery</h1>
+
+<p>Farm Fresh Products Delivered To Your Doorstep</p>
+
+<a class="btn" href="#">Shop Now</a>
+
+</section>
+
+<section class="products">
+
+<div class="card">
+<h3>🥔 Potato</h3>
+<p class="price">₹12/kg</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<h3>🧅 Onion</h3>
+<p class="price">₹40/kg</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<h3>🍅 Tomato</h3>
+<p class="price">₹30/kg</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<h3>🥬 Cabbage</h3>
+<p class="price">₹25/Piece</p>
+<button>Add to Cart</button>
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Suwas Agro | Fresh • Fast • Trusted
+
+</footer>
+
+</body>
+</html>
