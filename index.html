@@ -169,73 +169,62 @@ margin-top:30px;
 <footer>
 
 © 2026 Suwas Agro | Fresh • Fast • Trusted
- <button onclick="orderNow()">Place Order on WhatsApp</button>
+ <h2>Customer Details</h2>
 
-<script>
-function orderNow() {
-  let order =
-`*🛒 New Order - Suwas Agro*
+<input type="text" id="name" placeholder="Full Name"><br><br>
 
-🥔 Potato - 2 kg
-🧅 Onion - 1 kg
+<input type="tel" id="phone" placeholder="Mobile Number"><br><br>
 
-💰 Total: ₹64`;
+<textarea id="address" placeholder="Delivery Address"></textarea><br><br>
 
-  <div class="product-card">
+<h2>Products</h2>
 
-<h3>🥔 Potato</h3>
-
-<p>₹12 / Kg</p>
-
-<label>Select Quantity</label>
-
-<select id="potatoQty">
-<option value="0.5">0.5 Kg</option>
-<option value="1">1 Kg</option>
-<option value="2">2 Kg</option>
-<option value="5">5 Kg</option>
+<label>🥔 Potato (₹12/Kg)</label>
+<select id="potato">
+  <option value="0">Not Selected</option>
+  <option value="0.5">0.5 Kg</option>
+  <option value="1">1 Kg</option>
+  <option value="2">2 Kg</option>
+  <option value="5">5 Kg</option>
 </select>
 
-</div>
+<br><br>
 
-<br>
-
-<div class="product-card">
-
-<h3>🧅 Onion</h3>
-
-<p>₹40 / Kg</p>
-
-<label>Select Quantity</label>
-
-<select id="onionQty">
-<option value="0.5">0.5 Kg</option>
-<option value="1">1 Kg</option>
-<option value="2">2 Kg</option>
-<option value="5">5 Kg</option>
+<label>🧅 Onion (₹40/Kg)</label>
+<select id="onion">
+  <option value="0">Not Selected</option>
+  <option value="0.5">0.5 Kg</option>
+  <option value="1">1 Kg</option>
+  <option value="2">2 Kg</option>
+  <option value="5">5 Kg</option>
 </select>
 
-</div>
+<br><br>
 
-<br>
-
-<button onclick="orderNow()">🟢 Order on WhatsApp</button>
+<button onclick="sendOrder()">🟢 Place Order</button>
 
 <script>
-function orderNow(){
+function sendOrder(){
 
-let potato=document.getElementById("potatoQty").value;
-let onion=document.getElementById("onionQty").value;
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let address=document.getElementById("address").value;
 
-let message=
-`🛒 *Suwas Agro Order*
+let potato=document.getElementById("potato").value;
+let onion=document.getElementById("onion").value;
 
-🥔 Potato - ${potato} Kg
-🧅 Onion - ${onion} Kg`;
+let msg=`🛒 *New Order - Suwas Agro*
 
-let phone="919678412223"; // 
+👤 Name: ${name}
+📞 Phone: ${phone}
+📍 Address: ${address}
 
-window.open("https://wa.me/"+phone+"?text="+encodeURIComponent(message));
+🥔 Potato: ${potato} Kg
+🧅 Onion: ${onion} Kg`;
+
+let whatsapp="91XXXXXXXXXX"; // তোমাৰ WhatsApp নম্বৰ
+
+window.open("https://wa.me/"+whatsapp+"?text="+encodeURIComponent(msg));
 
 }
 </script>
